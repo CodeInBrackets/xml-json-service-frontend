@@ -30,6 +30,10 @@ module.exports = {
             presets: ["latest"],
             comments: false
         }
+      },
+      { 
+        test: /\.styl$/, 
+        loader: 'style-loader!css-loader!stylus-loader' 
       }
     ]
   },
