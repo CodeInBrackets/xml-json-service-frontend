@@ -6,9 +6,9 @@ var html = '<div id="_name_">                                                   
                         <div id="command_dropdown_content" class="dropdown-content">\
                         </div>                                                      \
                     </div>                                                          \
-                </div>                                                              \
-            <div id="request"><span id="command_path"></span></div>                 \
-            <div id="response"><span id="command_response"></span></div>'
+                <div id="request"></div>                 \
+                <div id="response"></div>\
+            </div> '
 
 module.exports = function(name){
     return html.replace('_name_',name)

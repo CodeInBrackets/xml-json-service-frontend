@@ -24,7 +24,7 @@ module.exports = class requestApiPresenter{
                 .addEventListener("click", this._selectType.bind(this, this._types[type]), false)
         this._document.getElementById('command_dropdown_button')
                 .addEventListener("click", this._callApi.bind(this), false)
-        this._aggregator.on("api:search:results:advertiser",this._populateApiCall)
+        this._aggregator.on("api:search:results:advertiser",this._populateApiCall.bind(this))
     }
 
     _selectType(type){
@@ -35,8 +35,10 @@ module.exports = class requestApiPresenter{
         this._aggregator.trigger("api:search:request:advertiser", this._model)
     }
 
-    _populateApiCall(a){
-        console.log(a)
+    _populateApiCall(result){
+        console.log(result)
+        this._document.getElementById('request').innerHTML =this._model.getRequest();
+        this._document.getElementById('response').innerHTML = result;
     }
     
 }

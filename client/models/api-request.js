@@ -6,7 +6,7 @@ class apiRequest{
         this.path = path
     }
 
-    get getRequest(){
+    getRequest(){
         return this.path + '?format='+this.format
     }
 }
