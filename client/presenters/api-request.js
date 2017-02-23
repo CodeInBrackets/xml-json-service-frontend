@@ -9,7 +9,6 @@ class requestApiPresenter{
     }
 
     _initializeData(){
-        console.log(this._types)
         this._document.getElementById('command_name')
             .insertAdjacentHTML('beforeend', this._model.name);
         for(var type in this._types)
@@ -36,7 +35,6 @@ class requestApiPresenter{
     }
 
     _populateApiCall(result){
-        console.log(result)
         this._document.getElementById('request').innerHTML =this._model.getRequest();
         this._document.getElementById('response').innerHTML = result;
     }
