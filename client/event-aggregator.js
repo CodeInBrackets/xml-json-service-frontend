@@ -1,4 +1,4 @@
-//extract from https://gist.github.com/ryanjadhav/7366955#file-event_aggregator-js
+//personal implementation of the code from https://gist.github.com/ryanjadhav/7366955#file-event_aggregator-js
 class EventAggregator {
     constructor(){
             this.events = {};

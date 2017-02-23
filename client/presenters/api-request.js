@@ -1,4 +1,4 @@
-module.exports = class requestApiPresenter{
+class requestApiPresenter{
     constructor(document, aggregator, model, types){
         this._document = document;
         this._aggregator = aggregator;
@@ -42,3 +42,5 @@ module.exports = class requestApiPresenter{
     }
     
 }
+
+module.exports = requestApiPresenter

@@ -14,17 +14,13 @@ function initialize(){
     var aggregatorHandler  = new Aggregator(); 
     var apihandler = new APIHandler(aggregatorHandler);
 
-    document.getElementById('app')
-        .insertAdjacentHTML('beforeend', mainView);
     var advertiserListView = apiRequestView("AdvertiserList");
-    document.getElementById('content')
-        .insertAdjacentHTML('beforeend', advertiserListView);
+
+    document.getElementById('app').insertAdjacentHTML('beforeend', mainView);
+    document.getElementById('content').insertAdjacentHTML('beforeend', advertiserListView);
+    
     var advertiserList = new apiRequestModel("Advertiser List", "/advertiser/", apiRequestModel.requestTypes.json)
     var advertiserListPresenter =new apiRequestPresenter(document, aggregatorHandler, advertiserList, apiRequestModel.requestTypes)
-
-    
-
-    
 }
 
 window.init = initialize
