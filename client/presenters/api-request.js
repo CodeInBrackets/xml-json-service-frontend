@@ -11,9 +11,11 @@ class requestApiPresenter{
     _initializeData(){
         this._document.getElementById('command_name')
             .insertAdjacentHTML('beforeend', this._model.name);
+        this._document.getElementById('command_dropdown_button').innerHTML = this._model.format
         for(var type in this._types)
             this._document.getElementById('command_dropdown_content')
                 .insertAdjacentHTML('beforeend', '<a id=command_dropdown_'+this._types[type]+'>'+this._types[type]+'</a>');
+                
         
     }
     
@@ -27,6 +29,7 @@ class requestApiPresenter{
     }
 
     _selectType(type){
+        this._document.getElementById('command_dropdown_button').innerHTML = type
         this._model.format = type
     }
 
