@@ -32,7 +32,7 @@ module.exports = {
         }
       },
       { 
-        test: /\.styl$/, 
+        test: /(\.css$|\.styl$)/, 
         loader: 'style-loader!css-loader!stylus-loader' 
       }
     ]

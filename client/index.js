@@ -11,11 +11,20 @@ function initialize(){
     var IndexStyle = require('./views/styles/main.styl');
     var apiRequestStyle = require('./views/styles/api-request.styl');
 
+    var aggregatorHandler  = new Aggregator(); 
+    var apihandler = new APIHandler(aggregatorHandler);
+
     document.getElementById('app')
         .insertAdjacentHTML('beforeend', mainView);
-
+    var advertiserListView = apiRequestView("AdvertiserList");
     document.getElementById('content')
-        .insertAdjacentHTML('beforeend', apiRequestView);
+        .insertAdjacentHTML('beforeend', advertiserListView);
+    var advertiserList = new apiRequestModel("Advertiser List", "/advertiser/", apiRequestModel.requestTypes.json)
+    var advertiserListPresenter =new apiRequestPresenter(document, aggregatorHandler, advertiserList )
+
+    
+
+    
 }
 
 window.init = initialize
