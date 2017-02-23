@@ -5,6 +5,7 @@ var html = '<div id="_name_">                                                   
                         <button id="command_dropdown_button" class="dropbtn">Dropdown</button>  \
                         <div id="command_dropdown_content" class="dropdown-content"></div>      \
                     </div>                                                                      \
+                    <div class="spacer"></div>                                                  \
                 </div>                                                                          \
                 <div id="request"></div>                                                        \
                 <div id="response"></div>                                                       \

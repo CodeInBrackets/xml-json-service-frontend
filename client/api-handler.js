@@ -5,7 +5,7 @@ class apiHandler{
                 var xhttp = new XMLHttpRequest();
                 xhttp.onreadystatechange = function() {
                     if (xhttp.readyState == 4 && xhttp.status == 200) {
-                        this._aggregator.trigger("api:search:results:advertiser",xhttp.responseText);
+                        this._aggregator.trigger("api:search:results:advertiser",xhttp.response);
                     }
                 }.bind(this);
                 xhttp.open("GET", request.getRequest(), true);
