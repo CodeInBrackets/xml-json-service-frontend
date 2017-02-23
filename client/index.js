@@ -20,7 +20,7 @@ function initialize(){
     document.getElementById('content')
         .insertAdjacentHTML('beforeend', advertiserListView);
     var advertiserList = new apiRequestModel("Advertiser List", "/advertiser/", apiRequestModel.requestTypes.json)
-    var advertiserListPresenter =new apiRequestPresenter(document, aggregatorHandler, advertiserList )
+    var advertiserListPresenter =new apiRequestPresenter(document, aggregatorHandler, advertiserList, apiRequestModel.requestTypes)
 
     
 
