@@ -16,4 +16,11 @@ app.get('/', function (req, res) {
     res.sendFile(path.resolve(__dirname + '/../client/views/index.html'));
 });
 
+app.get('/advertiser/', function (req, res) {
+    if (req.query.format ==="JSON")
+        res.sendFile(path.resolve(__dirname + '/mock-data/response.json'));
+    else
+        res.sendFile(path.resolve(__dirname + '/mock-data/response.xml'));
+});
+
 app.listen(port);
