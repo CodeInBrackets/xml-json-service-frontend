@@ -38,8 +38,10 @@ class requestApiPresenter{
     }
 
     _populateApiCall(result){
-        this._document.getElementById('request').innerHTML =this._model.getRequest();
-        this._document.getElementById('response').innerHTML = result;
+        this._document.getElementById('request').innerHTML = '<pre><code>' + result.method + " " + this._model.getRequest();+'</code></pre>'
+        this._document.getElementById('response').innerHTML =   '<pre><code>' + result.typeRequest + " " + result.status + " " + result.statusText + '\n' + 
+                                                                result.headers + '\n' + 
+                                                                result.content+'</code></pre>'
     }
     
 }

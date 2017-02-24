@@ -8,6 +8,8 @@ var port = process.env.PORT;
 if(!port)
     port=3000
 
+app.use('/www', express.static('www'))
+
 
 if(isDevMode)
     require('./webpack-load')(app);
